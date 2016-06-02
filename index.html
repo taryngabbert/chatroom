@@ -8,7 +8,7 @@
   <body ng-controller="mainCtrl">
     <div class="main-container">
 
-      <div class= "heading">
+      <div class= "input-box">
       <h1> DM ChatRoom </h1>
       </div>
 
@@ -17,12 +17,15 @@
       <!-- WHERE ALL THE MESSAGES SHOW UP-->
       <div class="messages-container">
         <p ng-repeat="message in messages"> {{message.text}} </p>
+        <p ng-repeat="message in messages" > {{message.time}}</p>
       </div>
 
       <!-- WHERE YOU CAN POST DATA -->
+      <div class="input-box">
       <form ng-submit="postData()">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+        <input class="form-control text-box" type="text" ng-model="message" placeholder="iMessage" >
       </form>
+    </div>
 
 
 
